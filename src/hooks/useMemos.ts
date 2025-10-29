@@ -31,7 +31,7 @@ export const useMemos = () => {
 
   useEffect(() => {
     loadMemos()
-  }, [])
+  }, [loadMemos])
 
   // 메모 생성
   const createMemo = useCallback(

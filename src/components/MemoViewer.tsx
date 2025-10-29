@@ -70,14 +70,14 @@ export default function MemoViewer({ isOpen, memo, onClose, onEdit, onDelete }: 
   }
 
   const getCategoryColor = (category: string) => {
-    const colors = {
+    const colors: Record<string, string> = {
       personal: 'bg-blue-100 text-blue-800',
       work: 'bg-green-100 text-green-800',
       study: 'bg-purple-100 text-purple-800',
       idea: 'bg-yellow-100 text-yellow-800',
       other: 'bg-gray-100 text-gray-800',
     }
-    return (colors as any)[category] || colors.other
+    return colors[category] || colors.other
   }
 
   return (
